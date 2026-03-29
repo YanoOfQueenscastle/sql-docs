@@ -47,10 +47,10 @@ ID of the file. *file_id* is **int**, with no default. Can't be `NULL`.
 | --- | --- | --- |
 | `database_id` | **int** | ID of the database. Not nullable. |
 | `file_id` | **int** | ID of the file. Not nullable. |
-| `volume_mount_point` | **nvarchar(512)** | Mount point at which the volume is rooted. Can return an empty string. Returns null on Linux. |
-| `volume_id` | **nvarchar(512)** | Operating system volume ID. Can return an empty string. Returns null on Linux. |
-| `logical_volume_name` | **nvarchar(512)** | Logical volume name. Can return an empty string. Returns null on Linux. |
-| `file_system_type` | **nvarchar(512)** | Type of file system volume (for example, NTFS, FAT, RAW). Can return an empty string. Returns null on Linux. |
+| `volume_mount_point` | **nvarchar(256)** | Mount point at which the volume is rooted. Can return an empty string. Returns null on Linux. |
+| `volume_id` | **nvarchar(256)** | Operating system volume ID. Can return an empty string. Returns null on Linux. |
+| `logical_volume_name` | **nvarchar(256)** | Logical volume name. Can return an empty string. Returns null on Linux. |
+| `file_system_type` | **nvarchar(256)** | Type of file system volume (for example, NTFS, FAT, RAW). Can return an empty string. Returns null on Linux. |
 | `total_bytes` | **bigint** | Total size in bytes of the volume. Not nullable. |
 | `available_bytes` | **bigint** | Available free space on the volume. Not nullable. |
 | `supports_compression` | **tinyint** | Indicates if the volume supports operating system compression. Not nullable on Windows, and returns null on Linux. |
